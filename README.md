@@ -65,7 +65,7 @@ Execute the following commands in your console to download the Docker images for
 docker pull lenaamorozz/mysql_for_car_catalog:linux
 ```
 ```bash
-docker pull lenaamorozz/car-catalog:linux
+docker pull lenaamorozz/car_catalog:linux
 ```
 
 #### For MacOS:
