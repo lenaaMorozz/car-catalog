@@ -62,28 +62,34 @@ Execute the following commands in your console to download the Docker images for
 #### For Linux:
 
 ```bash
-docker pull lenaamorozz/mysql_for_car_catalog
-docker pull lenaamorozz/car-catalog
+docker pull lenaamorozz/mysql_for_car_catalog:linux
+docker pull lenaamorozz/car-catalog:linux
 ```
 
 #### For MacOS:
 
 ```bash
-docker pull lenaamorozz/mysql_for_car_catalog
-docker pull lenaamorozz/car-catalog
+docker pull lenaamorozz/mysql_for_car_catalog:macos
+docker pull lenaamorozz/car_catalog:macos
 ```
-### 2. Start the Database Container
+### 2.To run Docker containers, you need to create a custom Docker network.
+
+To create a custom Docker network, execute the following command in your terminal:
+
+```bash
+docker network create <network_name>
+```
+### 3. Start the Database Container
 First, start the database container using the following command:
 ```bash
-docker run --name db -e MYSQL_ROOT_PASSWORD=pass -d lenaamorozz/mysql_for_car_catalog
+docker run --net=<network_name> --name db -e MYSQL_ROOT_PASSWORD=pass -d lenaamorozz/mysql_for_car_catalog
 ```
-### 3. Start the Application Container
+### 4. Start the Application Container
 After successfully starting the database container, you can start the application container using the following command:
 ```bash
-docker run --name app -d -p 8080:8080 lenaamorozz/car_catalog
+docker run --net=<network_name> --name app -d -p 8080:8080 lenaamorozz/car_catalog
 ```
-
-The API will start running at `localhost:8080`.
+The API will start running at `localhost:8080/cars`.
 
 ## Accessing the Application
 
