@@ -86,12 +86,12 @@ docker network create <network_name>
 ### 3. Start the Database Container
 First, start the database container using the following command:
 ```bash
-docker run --net=<network_name> --name db -e MYSQL_ROOT_PASSWORD=pass -d lenaamorozz/mysql_for_car_catalog
+docker run --net=<network_name> --name db -e MYSQL_ROOT_PASSWORD=pass -d lenaamorozz/mysql_for_car_catalog:<tag>
 ```
 ### 4. Start the Application Container
 After successfully starting the database container, you can start the application container using the following command:
 ```bash
-docker run --net=<network_name> --name app -d -p 8080:8080 lenaamorozz/car_catalog
+docker run --net=<network_name> --name app -d -p 8080:8080 lenaamorozz/car_catalog:<tag>
 ```
 The API will start running at `localhost:8080/cars`.
 
