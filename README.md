@@ -63,6 +63,8 @@ Execute the following commands in your console to download the Docker images for
 
 ```bash
 docker pull lenaamorozz/mysql_for_car_catalog:linux
+```
+```bash
 docker pull lenaamorozz/car-catalog:linux
 ```
 
@@ -70,6 +72,8 @@ docker pull lenaamorozz/car-catalog:linux
 
 ```bash
 docker pull lenaamorozz/mysql_for_car_catalog:macos
+```
+```bash
 docker pull lenaamorozz/car_catalog:macos
 ```
 ### 2.To run Docker containers, you need to create a custom Docker network.
