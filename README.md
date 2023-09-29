@@ -74,7 +74,7 @@ docker pull lenaamorozz/car_catalog:macos
 ```
 ### 2.To run Docker containers, you need to create a custom Docker network.
 
-To create a custom Docker network, execute the following command in your terminal:
+To create a custom Docker network, execute the following command in your console:
 
 ```bash
 docker network create <network_name>
